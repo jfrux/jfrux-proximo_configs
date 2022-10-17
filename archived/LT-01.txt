@@ -1,0 +1,56 @@
+board_name AIKONF7
+manufacturer_id AIKO
+
+# name: LT-01
+
+# feature
+feature -RX_PARALLEL_PWM
+
+# serial
+serial 0 0 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# aux
+aux 0 0 0 900 1100 0 0
+aux 1 13 1 900 1100 0 0
+aux 2 35 1 1925 2100 0 0
+aux 3 36 3 1875 2100 0 0
+aux 4 39 2 900 1075 0 0
+aux 5 49 2 1925 2100 0 0
+
+# master
+set acc_calibration = -35,50,1,1
+set serialrx_provider = GHST
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set motor_poles = 12
+set align_board_yaw = 180
+set bat_capacity = 1300
+set yaw_motors_reversed = ON
+set osd_units = IMPERIAL
+set osd_cap_alarm = 1300
+set osd_vbat_pos = 2400
+set osd_throttle_pos = 2336
+set osd_current_pos = 2368
+set osd_craft_name_pos = 2105
+set osd_display_name_pos = 2080
+set osd_warnings_pos = 14537
+set vcd_video_system = NTSC
+set name = LT-01
+set display_name = Proximo
+
+profile 0
+
+# profile 0
+set launch_control_mode = PITCHONLY
+set launch_trigger_throttle_percent = 30
+set launch_angle_limit = 55
+
+rateprofile 2

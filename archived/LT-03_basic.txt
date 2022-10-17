@@ -1,0 +1,48 @@
+# name: LT-03
+
+# feature
+feature -RX_PARALLEL_PWM
+
+# serial
+serial 0 0 115200 57600 0 115200
+serial 2 64 115200 57600 0 115200
+
+# map
+map TAER1234
+
+# aux
+aux 0 0 0 900 1300 0 0
+aux 1 13 1 900 1300 0 0
+
+
+# master
+set gyro_hardware_lpf = OPTION_2
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_type = PT2
+set gyro_lpf2_static_hz = 450
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set acc_calibration = 10,31,-11,1
+set serialrx_provider = GHST
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set motor_poles = 12
+set align_board_yaw = 180
+set yaw_motors_reversed = ON
+set name = LT-03
+
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 105
+set pitch_rc_rate = 90
+set yaw_rc_rate = 89
+set yaw_expo = 1
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 11

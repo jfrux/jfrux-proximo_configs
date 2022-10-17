@@ -1,0 +1,201 @@
+# PROXIMO RACING BETAFLIGHT SETUP FOR SWITCHBACK
+# Betaflight 4.3.0
+
+# NAME
+set display_name = Proximo
+
+## VTX SETUP
+### 1.) TBS Unify Pro32 Nano
+# vtxtable bands 5
+# vtxtable channels 8
+# vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+# vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+# vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+# vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+# vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+# vtxtable powerlevels 4
+# vtxtable powervalues 14 20 26 36
+# vtxtable powerlabels 25 100 400 MAX
+
+### 2.) NamelessRC
+# vtxtable bands 6
+# vtxtable channels 8
+# vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+# vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+# vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665    0 5885 5905    0    0
+# vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+# vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+# vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+# vtxtable powerlevels 4
+# vtxtable powervalues 0 1 2 3
+# vtxtable powerlabels 25 100 400 500
+
+### 3.) HDZero Race V2
+# vtxtable bands 2
+# vtxtable channels 8
+# vtxtable band 1 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+# vtxtable band 2 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+# vtxtable powerlevels 3
+# vtxtable powervalues 1 2 3
+# vtxtable powerlabels 25 200 0
+
+## SWB-00 SPECIFICS HDZero
+# set name = SWB-00
+
+## SWB-01 SPECIFICS
+# set name = SWB-01
+# serial 2 2048 115200 57600 0 115200
+# serial 4 64 115200 57600 0 115200
+
+# set dshot_bidir = OFF
+# set motor_pwm_protocol = DSHOT300
+# set yaw_motors_reversed = ON
+## END SWB-01 SPECIFICS
+
+## SWB-02 SPECIFICS
+# set name = SWB-02
+# serial 2 2048 115200 57600 0 115200
+# serial 4 64 115200 57600 0 115200
+## END SWB-02 SPECIFICS
+
+set name = SWB-05
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set yaw_motors_reversed = ON
+
+## SWB-03 SPECIFICS
+# set name = SWB-03
+# vtxtable bands 5
+# vtxtable channels 8
+# vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+# vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+# vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+# vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+# vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+# vtxtable powerlevels 4
+# vtxtable powervalues 14 20 26 36
+# vtxtable powerlabels 25 100 400 MAX
+
+# set dshot_bidir = ON
+# set motor_pwm_protocol = DSHOT600
+# set yaw_motors_reversed = ON
+## END SWB-03 SPECIFICS
+
+## SWB-04 SPECIFICS
+# set name = SWB-04
+##HGLRC Zues
+# vtxtable bands 5
+# vtxtable channels 8
+# vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
+# vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
+# vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
+# vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
+# vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+# vtxtable powerlevels 4
+# vtxtable powervalues 14 20 26 36
+# vtxtable powerlabels 25 100 400 MAX
+
+## SWB-05 SPECIFICS
+# set name = SWB-05
+# serial 2 2048 115200 57600 0 115200
+# serial 4 64 115200 57600 0 115200
+# set dshot_bidir = ON
+# set motor_pwm_protocol = DSHOT600
+# set yaw_motors_reversed = ON
+## END FLoSS-01 SPECIFICS
+
+
+## MODES
+aux 0 0 0 900 1100 0 0
+aux 1 13 1 900 1100 0 0
+aux 2 35 1 1925 2100 0 0
+aux 3 36 3 1875 2100 0 0
+aux 4 39 2 900 1075 0 0
+aux 5 49 2 1925 2100 0 0
+
+## CAMERA
+set fpv_mix_degrees = 50
+
+## BATTERY
+set bat_capacity = 1200
+
+## OSD
+set osd_units = IMPERIAL
+set osd_warn_visual_beeper = OFF
+set osd_warn_rssi = ON
+set osd_cap_alarm = 1500
+set osd_vbat_pos = 14711
+set osd_rssi_pos = 14394
+set osd_tim_2_pos = 139
+set osd_flymode_pos = 377
+set osd_throttle_pos = 257
+set osd_vtx_channel_pos = 14690
+set osd_crosshairs_pos = 204
+set osd_current_pos = 14678
+set osd_mah_drawn_pos = 344
+set osd_craft_name_pos = 14370
+set osd_display_name_pos = 14379
+set osd_warnings_pos = 14633
+set osd_avg_cell_voltage_pos = 385
+set osd_disarmed_pos = 14539
+set osd_stat_total_time = ON
+
+## VIDEO TRANSMITTER
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 1
+set vtx_freq = 5658
+set vcd_video_system = NTSC
+
+## LAUNCH CONTROL
+set launch_control_mode = PITCHONLY
+set launch_trigger_throttle_percent = 30
+set launch_angle_limit = 55
+
+## PIDS
+profile 0
+# set dyn_lpf_dterm_min_hz = 63
+# set dyn_lpf_dterm_max_hz = 153
+# set dterm_lowpass2_hz = 135
+set p_pitch = 37
+set d_pitch = 30
+set p_roll = 34
+set d_roll = 28
+set p_yaw = 36
+set d_min_roll = 18
+set d_min_pitch = 20
+
+## RATES
+rateprofile 0
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
+set roll_expo = 8
+set pitch_expo = 8
+set yaw_expo = 18
+set roll_srate = 65
+set pitch_srate = 65
+set yaw_srate = 65
+
+## LAUNCH CONTROL
+set launch_control_mode = PITCHONLY
+set launch_trigger_throttle_percent = 30
+set launch_angle_limit = 55
+
+## RECEIVER
+set serialrx_provider = GHST
+map TAER1234
+
+
+## MISC
+set small_angle = 180
+
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature TELEMETRY
+feature OSD
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
