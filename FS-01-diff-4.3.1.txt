@@ -1,0 +1,118 @@
+# name: FS-01
+
+# feature
+feature -RX_PARALLEL_PWM
+
+# serial
+serial 1 0 115200 57600 0 115200
+serial 3 0 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# aux
+aux 0 0 0 900 1100 0 0
+aux 1 1 7 900 1100 0 0
+aux 2 2 7 1850 2100 0 0
+aux 3 13 3 900 1100 0 0
+aux 4 35 3 1925 2100 0 0
+aux 5 36 4 1875 2100 0 0
+
+# master
+set gyro_lpf2_static_hz = 1000
+set dyn_notch_count = 2
+set dyn_notch_q = 400
+set dyn_notch_min_hz = 100
+set dyn_notch_max_hz = 800
+set gyro_lpf1_dyn_min_hz = 300
+set gyro_lpf1_dyn_max_hz = 600
+set gyro_lpf1_dyn_expo = 8
+set acc_calibration = -103,92,46,1
+set align_mag = CW180FLIP
+set mag_align_pitch = 1800
+set mag_align_yaw = 1800
+set mag_hardware = NONE
+set mag_calibration = -401,-403,-280
+set fpv_mix_degrees = 20
+set serialrx_provider = GHST
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set align_board_yaw = 180
+set beeper_dshot_beacon_tone = 3
+set yaw_motors_reversed = ON
+set small_angle = 180
+set gps_provider = UBLOX
+set gps_sbas_mode = AUTO
+set gps_auto_baud = ON
+set gps_ublox_use_galileo = ON
+set simplified_gyro_filter = OFF
+set osd_units = IMPERIAL
+set osd_warn_visual_beeper = OFF
+set osd_warn_rssi = ON
+set osd_cap_alarm = 1500
+set osd_logo_on_arming = ON
+set osd_logo_on_arming_duration = 25
+set osd_vbat_pos = 14712
+set osd_rssi_pos = 14619
+set osd_link_quality_pos = 200
+set osd_link_tx_power_pos = 14584
+set osd_tim_2_pos = 139
+set osd_flymode_pos = 14554
+set osd_throttle_pos = 14650
+set osd_crosshairs_pos = 204
+set osd_current_pos = 14679
+set osd_mah_drawn_pos = 344
+set osd_craft_name_pos = 39
+set osd_display_name_pos = 43
+set osd_gps_speed_pos = 14355
+set osd_home_dir_pos = 14346
+set osd_home_dist_pos = 14347
+set osd_compass_bar_pos = 14378
+set osd_altitude_pos = 14349
+set osd_warnings_pos = 14570
+set osd_avg_cell_voltage_pos = 385
+set osd_disarmed_pos = 14539
+set osd_stat_total_time = ON
+set osd_displayport_device = MSP
+set vcd_video_system = PAL
+set rpm_filter_harmonics = 1
+set name = FS-01
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_dyn_max_hz = 0
+set dterm_lpf1_dyn_expo = 0
+set dterm_lpf1_static_hz = 80
+set dterm_lpf2_static_hz = 140
+set anti_gravity_gain = 4000
+set p_pitch = 62
+set i_pitch = 83
+set d_pitch = 39
+set f_pitch = 129
+set p_roll = 54
+set i_roll = 72
+set d_roll = 34
+set f_roll = 113
+set p_yaw = 54
+set i_yaw = 72
+set f_yaw = 113
+set d_min_roll = 34
+set d_min_pitch = 39
+set feedforward_smooth_factor = 30
+set feedforward_jitter_factor = 9
+set simplified_master_multiplier = 105
+set simplified_i_gain = 75
+set simplified_d_gain = 110
+set simplified_pi_gain = 115
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 90
+set simplified_pitch_pi_gain = 110
+set simplified_dterm_filter = OFF
+
+rateprofile 0

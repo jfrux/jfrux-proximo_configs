@@ -10,10 +10,10 @@ map TAER1234
 
 # aux
 aux 0 0 0 900 1100 0 0
-aux 1 13 1 900 1100 0 0
-aux 2 35 1 1925 2100 0 0
-aux 3 36 3 1875 2100 0 0
-aux 4 39 2 900 1075 0 0
+aux 1 13 3 1900 2100 0 0
+aux 2 35 3 900 1075 0 0
+aux 3 36 4 1875 2100 0 0
+aux 4 49 2 1925 2100 0 0
 aux 5 49 2 1925 2100 0 0
 
 # master
@@ -28,13 +28,14 @@ set dyn_notch_max_hz = 650
 set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
 set acc_hardware = NONE
+set mag_hardware = NONE
+set baro_hardware = NONE
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
 set fpv_mix_degrees = 50
 set serialrx_provider = GHST
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT600
-set motor_poles = 14
 set align_board_yaw = 180
 set bat_capacity = 1380
 set vbat_scale = 111
@@ -65,6 +66,7 @@ set vcd_video_system = NTSC
 set rpm_filter_harmonics = 2
 set rpm_filter_min_hz = 150
 set rpm_filter_fade_range_hz = 100
+set name = LT-05
 set display_name = Proximo
 
 profile 0

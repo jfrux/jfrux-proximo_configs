@@ -1,9 +1,11 @@
+# name: WH-02
+
 # feature
+feature -SOFTSERIAL
 feature -RX_PARALLEL_PWM
 
 # serial
-serial 0 0 115200 57600 0 115200
-serial 2 64 115200 57600 0 115200
+serial 1 2048 115200 57600 0 115200
 
 # beacon
 beacon RX_LOST
@@ -14,10 +16,11 @@ map TAER1234
 
 # aux
 aux 0 0 0 900 1100 0 0
-aux 1 13 3 1900 2100 0 0
-aux 2 35 3 900 1075 0 0
-aux 3 36 4 1875 2100 0 0
-aux 4 49 2 1925 2100 0 0
+aux 1 1 7 1925 2100 0 0
+aux 2 2 7 900 1075 0 0
+aux 3 13 3 900 1100 0 0
+aux 4 35 3 1925 2100 0 0
+aux 5 36 4 1875 2100 0 0
 
 # vtxtable
 vtxtable bands 5
@@ -28,32 +31,31 @@ vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
 vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
 vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
 vtxtable powerlevels 4
-vtxtable powervalues 14 20 26 36
-vtxtable powerlabels 25 100 400 MAX
+vtxtable powervalues 0 1 2 3
+vtxtable powerlabels 25 100 200 350
 
 # master
-set gyro_lpf1_static_hz = 0
+set gyro_lpf1_static_hz = 275
+set gyro_lpf2_static_hz = 550
 set dyn_notch_count = 1
-set dyn_notch_q = 600
-set dyn_notch_min_hz = 250
-set dyn_notch_max_hz = 650
-set gyro_lpf1_dyn_min_hz = 0
-set gyro_lpf1_dyn_max_hz = 0
-set acc_hardware = NONE
-set mag_hardware = NONE
-set baro_hardware = NONE
-set rc_smoothing_auto_factor = 25
-set rc_smoothing_auto_factor_throttle = 25
-set fpv_mix_degrees = 50
-set serialrx_provider = GHST
+set dyn_notch_q = 500
+set dyn_notch_min_hz = 120
+set gyro_lpf1_dyn_min_hz = 275
+set gyro_lpf1_dyn_max_hz = 550
+set acc_calibration = -65,-9,57,1
+set serialrx_provider = CRSF
+set blackbox_sample_rate = 1/2
+set min_throttle = 1070
+set dshot_idle_value = 600
 set dshot_bidir = ON
-set motor_pwm_protocol = DSHOT600
-set motor_poles = 12
-set align_board_yaw = 180
-set bat_capacity = 1380
-set vbat_scale = 111
+set dshot_bitbang = ON
+set use_unsynced_pwm = OFF
+set motor_pwm_protocol = DSHOT300
+set motor_pwm_rate = 480
 set yaw_motors_reversed = ON
-set simplified_gyro_filter = OFF
+set small_angle = 180
+set pid_process_denom = 1
+set simplified_gyro_filter_multiplier = 110
 set osd_units = IMPERIAL
 set osd_warn_visual_beeper = OFF
 set osd_warn_rssi = ON
@@ -62,10 +64,12 @@ set osd_logo_on_arming = ON
 set osd_logo_on_arming_duration = 25
 set osd_vbat_pos = 14711
 set osd_rssi_pos = 14394
+set osd_link_quality_pos = 2401
+set osd_rssi_dbm_pos = 2369
 set osd_tim_2_pos = 139
 set osd_flymode_pos = 377
 set osd_throttle_pos = 14649
-set osd_vtx_channel_pos = 14701
+set osd_vtx_channel_pos = 2433
 set osd_crosshairs_pos = 204
 set osd_current_pos = 14678
 set osd_mah_drawn_pos = 344
@@ -75,44 +79,48 @@ set osd_warnings_pos = 14633
 set osd_avg_cell_voltage_pos = 385
 set osd_disarmed_pos = 14539
 set osd_stat_total_time = ON
-set vcd_video_system = NTSC
-set rpm_filter_harmonics = 2
-set rpm_filter_min_hz = 150
-set rpm_filter_fade_range_hz = 100
-set name = LT-01
+set vtx_band = 4
+set vtx_channel = 4
+set vtx_power = 2
+set vtx_low_power_disarm = ON
+set vtx_freq = 5800
+set gyro_1_sensor_align = CW90
+set gyro_1_align_yaw = 900
+set name = WH-02
 set display_name = Proximo
 
 profile 0
 
 # profile 0
-set dterm_lpf1_dyn_expo = 10
-set anti_gravity_gain = 3000
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 4500
 set iterm_relax_cutoff = 20
-set iterm_limit = 500
-set pidsum_limit_yaw = 1000
-set throttle_boost = 2
-set p_pitch = 42
-set i_pitch = 85
-set d_pitch = 42
-set f_pitch = 135
-set p_roll = 37
-set d_roll = 36
-set f_yaw = 80
-set d_min_roll = 26
-set d_min_pitch = 26
-set d_max_gain = 25
+set p_pitch = 56
+set i_pitch = 60
+set d_pitch = 48
+set f_pitch = 149
+set p_roll = 53
+set i_roll = 57
+set d_roll = 43
+set f_roll = 143
+set p_yaw = 53
+set i_yaw = 57
+set f_yaw = 143
+set d_min_roll = 43
+set d_min_pitch = 48
 set d_max_advance = 0
-set launch_control_mode = PITCHONLY
-set launch_trigger_throttle_percent = 30
-set launch_angle_limit = 55
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 35
-set feedforward_jitter_factor = 4
+set feedforward_jitter_factor = 9
 set feedforward_boost = 18
-set feedforward_max_rate_limit = 100
-set dyn_idle_min_rpm = 40
-set dyn_idle_p_gain = 35
-set simplified_pids_mode = OFF
+set feedforward_max_rate_limit = 95
+set simplified_master_multiplier = 120
+set simplified_i_gain = 60
+set simplified_d_gain = 120
+set simplified_pi_gain = 145
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 190
+set simplified_pitch_d_gain = 95
 
 rateprofile 0
 
@@ -124,6 +132,6 @@ set yaw_rc_rate = 89
 set yaw_expo = 1
 set roll_srate = 70
 set pitch_srate = 70
-set yaw_srate = 11
+set yaw_srate = 43
 set tpa_rate = 70
 set tpa_breakpoint = 1250
