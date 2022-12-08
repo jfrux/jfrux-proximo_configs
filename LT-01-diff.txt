@@ -14,10 +14,11 @@ map TAER1234
 
 # aux
 aux 0 0 0 900 1100 0 0
-aux 1 13 3 1900 2100 0 0
-aux 2 35 3 900 1075 0 0
+aux 1 13 3 900 1100 0 0
+aux 2 35 3 1925 2100 0 0
 aux 3 36 4 1875 2100 0 0
 aux 4 49 2 1925 2100 0 0
+aux 5 49 2 1925 2100 0 0
 
 # vtxtable
 vtxtable bands 5
@@ -55,32 +56,37 @@ set vbat_scale = 111
 set yaw_motors_reversed = ON
 set simplified_gyro_filter = OFF
 set osd_units = IMPERIAL
+set osd_warn_batt_not_full = OFF
+set osd_warn_batt_warning = OFF
+set osd_warn_batt_critical = OFF
 set osd_warn_visual_beeper = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
 set osd_warn_rssi = ON
 set osd_cap_alarm = 1500
 set osd_logo_on_arming = ON
 set osd_logo_on_arming_duration = 25
-set osd_vbat_pos = 14711
-set osd_rssi_pos = 14394
+set osd_vbat_pos = 14743
+set osd_rssi_pos = 58
 set osd_tim_2_pos = 139
 set osd_flymode_pos = 377
-set osd_throttle_pos = 14649
-set osd_vtx_channel_pos = 14701
+set osd_throttle_pos = 14713
+set osd_vtx_channel_pos = 365
 set osd_crosshairs_pos = 204
-set osd_current_pos = 14678
+set osd_current_pos = 340
 set osd_mah_drawn_pos = 344
-set osd_craft_name_pos = 14370
-set osd_display_name_pos = 14379
-set osd_warnings_pos = 14633
+set osd_craft_name_pos = 34
+set osd_display_name_pos = 14370
+set osd_warnings_pos = 14729
 set osd_avg_cell_voltage_pos = 385
-set osd_disarmed_pos = 14539
+set osd_disarmed_pos = 14721
 set osd_stat_total_time = ON
 set vcd_video_system = NTSC
 set rpm_filter_harmonics = 2
 set rpm_filter_min_hz = 150
 set rpm_filter_fade_range_hz = 100
 set name = LT-01
-set display_name = Proximo
+set display_name = Proxim0
 
 profile 0
 
