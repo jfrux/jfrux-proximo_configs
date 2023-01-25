@@ -1,0 +1,88 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.2.9 Apr 27 2021 / 19:34:29 (e097f4ab7) MSP API: 1.43
+# config: manufacturer_id: TMTR, board_name: TMOTORF7, version: e02dd6f2, date: 2020-11-04T11:31:26Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name TMOTORF7
+manufacturer_id TMTR
+mcu_id 002a00453338510c32343933
+signature 
+
+# name: Skyeliner
+
+# resources
+resource MOTOR 1 B01
+resource MOTOR 2 B00
+resource MOTOR 3 C07
+resource MOTOR 4 C06
+resource SERVO 1 A08
+resource LED_STRIP 1 NONE
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature SERVO_TILT
+feature TELEMETRY
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# serial
+serial 4 64 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1875 2100 0 0
+aux 1 13 1 900 1075 0 0
+aux 2 35 1 1925 2100 0 0
+aux 3 36 3 1875 2100 0 0
+
+# master
+set acc_calibration = -23,-4,141,1
+set fpv_mix_degrees = 20
+set serialrx_provider = CRSF
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set yaw_motors_reversed = ON
+set small_angle = 180
+set name = Skyeliner
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

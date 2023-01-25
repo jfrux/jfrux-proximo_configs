@@ -1,0 +1,83 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.1.1 Nov 15 2019 / 12:57:05 (1e5e3d369) MSP API: 1.42
+# manufacturer_id: AIKO   board_name: AIKONF7   custom defaults: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name AIKONF7
+manufacturer_id AIKO
+mcu_id 003f002f5530500a20343438
+signature 
+
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature TELEMETRY
+feature OSD
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 2 2048 115200 57600 0 115200
+
+# aux
+aux 0 0 0 900 1100 0 0
+aux 1 13 1 900 1075 0 0
+aux 2 36 3 900 1100 0 0
+aux 3 39 2 900 1150 0 0
+
+# master
+set acc_calibration = 42,0,73
+set rssi_channel = 16
+set serialrx_provider = SBUS
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set yaw_motors_reversed = ON
+set pid_process_denom = 1
+set osd_units = IMPERIAL
+set osd_warn_rssi = ON
+set osd_warn_link_quality = ON
+set osd_vbat_pos = 14647
+set osd_rssi_pos = 14657
+set osd_link_quality_pos = 14625
+set osd_vtx_channel_pos = 14388
+set osd_current_pos = 14710
+set osd_mah_drawn_pos = 14679
+set osd_warnings_pos = 14537
+set osd_disarmed_pos = 14570
+set vcd_video_system = NTSC
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

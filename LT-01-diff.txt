@@ -18,7 +18,6 @@ aux 1 13 3 900 1100 0 0
 aux 2 35 3 1925 2100 0 0
 aux 3 36 4 1875 2100 0 0
 aux 4 49 2 1925 2100 0 0
-aux 5 49 2 1925 2100 0 0
 
 # vtxtable
 vtxtable bands 5
@@ -66,11 +65,11 @@ set osd_warn_rssi = ON
 set osd_cap_alarm = 1500
 set osd_logo_on_arming = ON
 set osd_logo_on_arming_duration = 25
-set osd_vbat_pos = 14743
+set osd_vbat_pos = 14742
 set osd_rssi_pos = 58
 set osd_tim_2_pos = 139
 set osd_flymode_pos = 377
-set osd_throttle_pos = 14713
+set osd_throttle_pos = 14392
 set osd_vtx_channel_pos = 365
 set osd_crosshairs_pos = 204
 set osd_current_pos = 340
