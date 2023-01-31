@@ -1,3 +1,21 @@
+defaults nosave
+
+
+# version
+# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.1 Nov 12 2022 / 09:26:13 (norevision) MSP API: 1.44
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name CRAZYBEEF4SX1280
+mcu_id 005200485047500520333539
+signature 
+
+# name: WH-02
+
 # serial
 serial 1 2048 115200 57600 0 115200
 
@@ -117,6 +135,13 @@ set simplified_dmax_gain = 0
 set simplified_feedforward_gain = 190
 set simplified_pitch_d_gain = 95
 
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
 rateprofile 0
 
 # rateprofile 0
@@ -130,3 +155,18 @@ set pitch_srate = 70
 set yaw_srate = 43
 set tpa_rate = 70
 set tpa_breakpoint = 1250
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
