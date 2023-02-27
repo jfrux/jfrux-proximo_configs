@@ -1,0 +1,18 @@
+---
+summary:
+  name: Proximo
+  author: Proximo
+  info: Proximo Theme
+
+colors:
+  PRIMARY1:   0x000000
+  PRIMARY2:   0xF8FCF8
+  PRIMARY3:   0x000000
+  SECONDARY1: 0x000098
+  SECONDARY2: 0xF8FCF8
+  SECONDARY3: 0xF8FCF8
+  FOCUS:      0x0000F0
+  EDIT:       0x000000
+  ACTIVE:     0xF0FCF0
+  WARNING:    0xF8FCF8
+  DISABLED:   0x484C48

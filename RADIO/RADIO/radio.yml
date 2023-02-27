@@ -1,0 +1,170 @@
+semver: 2.7.1
+board: tx16s
+calib: 
+   Rud:
+      mid: 1010
+      spanNeg: 622
+      spanPos: 689
+   Ele:
+      mid: 1008
+      spanNeg: 669
+      spanPos: 718
+   Thr:
+      mid: 988
+      spanNeg: 754
+      spanPos: 663
+   Ail:
+      mid: 1083
+      spanNeg: 729
+      spanPos: 660
+   S1:
+      mid: 1005
+      spanNeg: 990
+      spanPos: 1026
+   6POS:
+      mid: 1029
+      spanNeg: 5388
+      spanPos: 9758
+   S2:
+      mid: 1006
+      spanNeg: 991
+      spanPos: 1025
+   LS:
+      mid: 997
+      spanNeg: 699
+      spanPos: 507
+   RS:
+      mid: 999
+      spanNeg: 693
+      spanPos: 668
+vBatWarn: 42
+txVoltageCalibration: 3
+backlightMode: backlight_mode_keys
+antennaMode: MODE_PER_MODEL
+disableRtcWarning: 1
+keysBacklight: 0
+rotEncDirection: 0
+internalModule: TYPE_CROSSFIRE
+trainer: 
+   mix: 
+      0:
+         srcChn: 0
+         mode: REPL
+         studWeight: 100
+      1:
+         srcChn: 1
+         mode: REPL
+         studWeight: 100
+      2:
+         srcChn: 2
+         mode: REPL
+         studWeight: 100
+      3:
+         srcChn: 3
+         mode: REPL
+         studWeight: 100
+view: 0
+fai: 0
+beepMode: mode_nokeys
+alarmsFlash: 1
+disableMemoryWarning: 0
+disableAlarmWarning: 1
+stickMode: 1
+timezone: 0
+adjustRTC: 0
+inactivityTimer: 3
+internalModuleBaudrate: 4
+hapticMode: mode_quiet
+switchesDelay: 0
+lightAutoOff: 1
+templateSetup: 17
+PPM_Multiplier: 0
+hapticLength: 0
+beepLength: 0
+hapticStrength: 0
+gpsFormat: 0
+speakerPitch: 300
+speakerVolume: 7
+vBatMin: 64
+vBatMax: 84
+backlightBright: 0
+globalTimer: 1315868
+bluetoothBaudrate: 0
+bluetoothMode: OFF
+countryCode: 0
+pwrOnSpeed: 0
+pwrOffSpeed: 2
+noJitterFilter: 1
+imperial: 1
+disableRssiPoweroffAlarm: 1
+USBMode: 0
+jackMode: 0
+ttsLanguage: "en"
+beepVolume: 0
+wavVolume: 0
+varioVolume: 2
+backgroundVolume: 4
+varioPitch: 0
+varioRange: 0
+varioRepeat: 0
+serialPort: 
+   VCP:
+      mode: CLI
+switchConfig: 
+   SA:
+      type: 3pos
+      name: ""
+   SB:
+      type: 3pos
+      name: ""
+   SC:
+      type: 3pos
+      name: ""
+   SD:
+      type: 3pos
+      name: ""
+   SE:
+      type: 3pos
+      name: ""
+   SF:
+      type: 2pos
+      name: ""
+   SG:
+      type: 3pos
+      name: ""
+   SH:
+      type: toggle
+      name: ""
+potsConfig: 
+   S1:
+      type: with_detent
+      name: ""
+   6POS:
+      type: multipos_switch
+      name: ""
+   S2:
+      type: with_detent
+      name: ""
+slidersConfig: 
+   LS:
+      type: with_detent
+      name: ""
+   RS:
+      type: with_detent
+      name: ""
+currModelFilename: "model16.yml"
+blOffBright: 6
+bluetoothName: ""
+themeName: "EdgeTX"
+themeData: 
+   options: 
+      0:
+         type: Unsigned
+         value: 
+            unsignedValue: 65535
+      1:
+         type: Unsigned
+         value: 
+            unsignedValue: 57603
+ownerRegistrationID: " 40WRVP-"
+uartSampleMode: 0

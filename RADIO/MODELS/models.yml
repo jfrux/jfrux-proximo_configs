@@ -1,0 +1,9 @@
+- "Quads":
+  - filename: "model13.yml"
+    name: "GHOST"
+  - filename: "model14.yml"
+    name: "Crossfire"
+  - filename: "model15.yml"
+    name: "MODEL15"
+  - filename: "model16.yml"
+    name: "ELRS"
