@@ -1,4 +1,4 @@
-set craft_name = Alpha Q
+set craft_name = Mike Lit
 set pilot_name = Proximo
 
 # serial
@@ -57,46 +57,26 @@ set osd_units = IMPERIAL
 set osd_cap_alarm = 1500
 set osd_logo_on_arming = ON
 set osd_logo_on_arming_duration = 25
-<<<<<<< HEAD
-set osd_vbat_pos = 15875
-set osd_rssi_pos = 58
-set osd_tim_2_pos = 139
-set osd_flymode_pos = 377
-set osd_throttle_pos = 15396
-=======
 set osd_vbat_pos = 15879
 set osd_rssi_pos = 58
 set osd_tim_2_pos = 139
 set osd_flymode_pos = 377
 set osd_throttle_pos = 15401
->>>>>>> de4e528 (Fixes)
 set osd_vtx_channel_pos = 365
 set osd_crosshairs_pos = 204
 set osd_current_pos = 340
 set osd_mah_drawn_pos = 344
-<<<<<<< HEAD
-set osd_craft_name_pos = 14376
-set osd_pilot_name_pos = 14856
-set osd_warnings_pos = 393
-set osd_avg_cell_voltage_pos = 385
-set osd_disarmed_pos = 14865
-=======
 set osd_craft_name_pos = 14373
 set osd_pilot_name_pos = 14853
 set osd_warnings_pos = 393
 set osd_avg_cell_voltage_pos = 385
 set osd_disarmed_pos = 14862
->>>>>>> de4e528 (Fixes)
 set osd_displayport_device = MSP
 set osd_canvas_width = 50
 set osd_canvas_height = 18
 set vtx_band = 5
 set vtx_channel = 1
-<<<<<<< HEAD
-set vtx_power = 1
-=======
 set vtx_power = 3
->>>>>>> de4e528 (Fixes)
 set vtx_freq = 5658
 set vcd_video_system = HD
 set gyro_1_align_yaw = 2700
