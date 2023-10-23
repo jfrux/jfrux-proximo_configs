@@ -1,0 +1,209 @@
+# feature
+feature -RX_PARALLEL_PWM
+feature RX_SERIAL
+feature TELEMETRY
+feature LED_STRIP
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 4 8192 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# led
+led 0 0,0:N:C:4
+led 1 0,1:N:C:4
+led 2 0,2:N:C:4
+led 3 0,3:N:C:4
+led 4 0,4:N:C:4
+led 5 0,5:N:C:4
+led 6 1,5:N:C:4
+led 7 1,4:N:C:4
+led 8 1,3:N:C:4
+led 9 1,2:N:C:4
+led 10 1,1:N:C:4
+led 11 1,0:N:C:4
+
+# mode_color
+mode_color 0 1 2
+mode_color 0 2 3
+mode_color 0 3 5
+mode_color 0 4 0
+mode_color 0 5 0
+mode_color 6 0 2
+mode_color 6 1 1
+mode_color 7 0 5
+
+# aux
+aux 0 0 0 900 1100 0 0
+aux 1 13 3 900 1100 0 0
+aux 2 35 3 1925 2100 0 0
+aux 3 36 4 1875 2100 0 0
+aux 4 49 2 1900 2100 0 0
+
+# adjrange
+adjrange 0 0 6 900 2100 30 1 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 25 100 200 400
+vtxtable powerlabels 25 100 200 400
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 200
+set dyn_notch_q = 400
+set dyn_notch_min_hz = 110
+set dyn_notch_max_hz = 400
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
+set acc_calibration = 97,-8,-411,1
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_auto_factor_throttle = 25
+set serialrx_provider = CRSF
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set yaw_motors_reversed = ON
+set small_angle = 180
+set simplified_gyro_filter = OFF
+set ledstrip_race_color = CYAN
+set osd_units = IMPERIAL
+set osd_warn_batt_not_full = OFF
+set osd_warn_batt_warning = OFF
+set osd_warn_batt_critical = OFF
+set osd_warn_visual_beeper = OFF
+set osd_warn_no_gps_rescue = OFF
+set osd_warn_gps_rescue_disabled = OFF
+set osd_warn_rssi = ON
+set osd_cap_alarm = 1500
+set osd_logo_on_arming = ON
+set osd_logo_on_arming_duration = 25
+set osd_vbat_pos = 14742
+set osd_rssi_pos = 58
+set osd_tim_2_pos = 139
+set osd_flymode_pos = 377
+set osd_throttle_pos = 56
+set osd_vtx_channel_pos = 365
+set osd_crosshairs_pos = 204
+set osd_current_pos = 340
+set osd_mah_drawn_pos = 344
+set osd_craft_name_pos = 14390
+set osd_display_name_pos = 14370
+set osd_warnings_pos = 14729
+set osd_avg_cell_voltage_pos = 385
+set osd_disarmed_pos = 14722
+set osd_stat_total_time = ON
+set vtx_band = 5
+set vtx_channel = 2
+set vtx_power = 1
+set vtx_freq = 5695
+set vcd_video_system = NTSC
+set gyro_1_align_yaw = 2700
+set rpm_filter_harmonics = 1
+set rpm_filter_q = 1000
+set name = WREKD7
+set display_name = Proxim0
+
+profile 0
+
+# profile 0
+set dterm_lpf1_static_hz = 0
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set p_pitch = 133
+set i_pitch = 119
+set d_pitch = 130
+set f_pitch = 212
+set p_roll = 121
+set i_roll = 107
+set d_roll = 99
+set f_roll = 194
+set p_yaw = 121
+set i_yaw = 107
+set f_yaw = 194
+set d_min_roll = 99
+set d_min_pitch = 130
+set motor_output_limit = 88
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 3
+set feedforward_boost = 18
+set simplified_master_multiplier = 180
+set simplified_i_gain = 50
+set simplified_d_gain = 185
+set simplified_pi_gain = 150
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 90
+set simplified_pitch_d_gain = 115
+set simplified_pitch_pi_gain = 105
+
+profile 1
+
+# profile 1
+set motor_output_limit = 88
+
+profile 2
+
+# profile 2
+set motor_output_limit = 88
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
+set roll_srate = 65
+set pitch_srate = 65
+set yaw_srate = 43
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
+
+rateprofile 1
+
+# rateprofile 1
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
+
+rateprofile 2
+
+# rateprofile 2
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
+
+rateprofile 3
+
+# rateprofile 3
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
+
+rateprofile 4
+
+# rateprofile 4
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
+
+rateprofile 5
+
+# rateprofile 5
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 75
+
+# restore original rateprofile selection
+rateprofile 0

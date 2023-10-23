@@ -56,9 +56,9 @@ set osd_warnings_pos = 14729
 set osd_avg_cell_voltage_pos = 385
 set osd_disarmed_pos = 14721
 set osd_stat_total_time = ON
-set gyro_1_align_yaw = 2700
 set name = LT-06
 set display_name = Proxim0
+set gyro_1_align_yaw = 2700
 
 profile 0
 

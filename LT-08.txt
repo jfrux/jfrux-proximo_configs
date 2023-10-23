@@ -1,0 +1,139 @@
+# feature
+feature -TELEMETRY
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 4 8192 115200 57600 0 115200
+
+# map
+map TAER1234
+
+# aux
+aux 0 0 0 900 1100 0 0
+aux 1 13 3 900 1100 0 0
+aux 2 35 3 1925 2100 0 0
+aux 3 36 4 1875 2100 0 0
+aux 4 49 2 1925 2100 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665    0 5885 5905    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 4
+vtxtable powervalues 25 100 200 400
+vtxtable powerlabels 25 100 200 350
+
+# master
+set gyro_lpf1_static_hz = 0
+set dyn_notch_count = 2
+set dyn_notch_q = 450
+set dyn_notch_min_hz = 125
+set dyn_notch_max_hz = 650
+set gyro_lpf1_dyn_min_hz = 500
+set gyro_lpf1_dyn_max_hz = 1000
+set gyro_lpf1_dyn_expo = 7
+set acc_lpf_hz = 10
+set acc_calibration = 78,4,-63,1
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_auto_factor_throttle = 25
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT600
+set yaw_motors_reversed = ON
+set small_angle = 180
+set simplified_gyro_filter = OFF
+set osd_units = IMPERIAL
+set osd_cap_alarm = 1380
+set osd_logo_on_arming = ON
+set osd_logo_on_arming_duration = 25
+set osd_vbat_pos = 14742
+set osd_rssi_pos = 58
+set osd_tim_2_pos = 139
+set osd_flymode_pos = 377
+set osd_throttle_pos = 14392
+set osd_vtx_channel_pos = 365
+set osd_crosshairs_pos = 204
+set osd_current_pos = 340
+set osd_mah_drawn_pos = 344
+set osd_craft_name_pos = 34
+set osd_pilot_name_pos = 14370
+set osd_warnings_pos = 14729
+set osd_avg_cell_voltage_pos = 385
+set osd_disarmed_pos = 14721
+set osd_canvas_width = 30
+set osd_canvas_height = 13
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 1
+set vtx_freq = 5658
+set vcd_video_system = NTSC
+set gyro_1_align_yaw = 2700
+set rpm_filter_fade_range_hz = 100
+set craft_name = WREKD.COM
+set pilot_name = Proxim0
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_expo = 7
+set iterm_relax_cutoff = 20
+set iterm_limit = 500
+set pidsum_limit_yaw = 1000
+set p_pitch = 43
+set i_pitch = 90
+set d_pitch = 33
+set f_pitch = 137
+set p_roll = 38
+set i_roll = 78
+set d_roll = 31
+set d_min_roll = 22
+set d_min_pitch = 22
+set thrust_linear = 20
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 3
+set feedforward_boost = 18
+set feedforward_max_rate_limit = 100
+set simplified_pids_mode = RP
+set simplified_i_gain = 115
+set simplified_d_gain = 75
+set simplified_pi_gain = 85
+set simplified_dmax_gain = 125
+set simplified_pitch_d_gain = 90
+set simplified_pitch_pi_gain = 110
+set tpa_rate = 60
+set tpa_breakpoint = 1250
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 100
+set pitch_rc_rate = 90
+set yaw_rc_rate = 89
+set yaw_expo = 1
+set roll_srate = 71
+set pitch_srate = 70
+set yaw_srate = 11
+set throttle_limit_type = SCALE
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
