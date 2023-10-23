@@ -83,6 +83,8 @@ set gyro_1_align_yaw = 2700
 set rpm_filter_harmonics = 2
 set rpm_filter_min_hz = 150
 set rpm_filter_fade_range_hz = 100
+set craft_name = Mike Lit
+set pilot_name = Proximo
 
 profile 0
 
